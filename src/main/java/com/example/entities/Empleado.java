@@ -43,6 +43,7 @@ public class Empleado implements Serializable{
     private String segundoApellido;
     @DateTimeFormat
     private LocalDate fechaAlta;
+    private Genero genero;
 
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)

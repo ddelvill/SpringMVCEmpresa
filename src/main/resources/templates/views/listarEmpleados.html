@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Empleados</h1>
+
+    <table>
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Fecha de Alta</th>
+                <th>Genero</th>
+                <th>Departamento</th>
+                <th>Acciones</th>
+    
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr th:each="empleado : ${empleados}">
+
+                <td th:text="${empleado.itd}"></td>
+                <td th:text="${empleado.nombre}"></td>
+                <td th:text="${empleado.primerApellido}"></td>
+                <td th:text="${empleado.segundoApellido}"></td>
+                <td th:text="${empleado.fechaAlta}"></td>
+                <td th:text="${empleado.genero}"></td>
+                <td th:text="${empleado.departamento.nombre}"></td> 
+               <td>
+                    Acciones temporal
+                </td>
+
+            </tr>
+
+
+
+        </tbody>
+
+
+
+
+    </table>
+</body>
+</html>
